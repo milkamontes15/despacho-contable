@@ -417,3 +417,46 @@ iframe {
     line-height: 1.8;
     text-align: justify;
 }
+
+@media (max-width: 768px) {
+
+    .empresa-container,
+    .empresa-grid,
+    .grupo-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .empresa-imagen {
+        order: -1;
+    }
+
+    .grupo-card {
+        padding: 30px 20px;
+    }
+
+    .grupo-header h2 {
+        font-size: 26px;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .hero {
+        height: auto;
+        padding: 80px 20px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .btn {
+        padding: 12px 24px;
+        font-size: 14px;
+    }
+}
