@@ -24,8 +24,8 @@
 
     <!-- BOTON HAMBURGUESA -->
     <div class="menu-toggle" onclick="toggleMenu()">
-        <i class="fas fa-bars"></i>
-    </div>
+    <i class="fas fa-bars"></i>
+</div>
 
     <!-- MENU LATERAL -->
     <ul class="menu" id="menu">
@@ -112,17 +112,18 @@
             </div> 
         </div> 
     </section>
-
+    
     <script>
-function toggleMenu(){
+    function toggleMenu(){
     document.getElementById("menu").classList.toggle("active");
 }
 
-function toggleSubmenu(event){
+    function toggleSubmenu(event){
     event.preventDefault();
     event.target.parentElement.classList.toggle("active");
 }
 </script>
+
 <footer> 
     © 2026 Despacho Contable - C.P. Carlos Gálvez | Impulsora de Marcas del Noroeste S.A. de C.V. | Todos los derechos reservados 
 </footer> 

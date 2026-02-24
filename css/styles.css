@@ -31,7 +31,7 @@ header {
 
 /* ===== NAVBAR ===== */
 .navbar{
-    background:#ff2e4c;
+    background:#0c2d48; /* color profesional azul */
     color:white;
     padding:15px 20px;
     display:flex;
@@ -46,25 +46,27 @@ header {
 
 /* BOTON HAMBURGUESA */
 .menu-toggle{
-    font-size:24px;
+    font-size:26px;
     cursor:pointer;
 }
 
-/* ===== MENU LATERAL ===== */
+/* ===== MENU LATERAL DERECHO ===== */
 .menu{
     position:fixed;
     top:0;
-    left:-260px;
+    right:-260px; /* oculto a la derecha */
     width:260px;
     height:100%;
     background:#083b5c;
     list-style:none;
     padding-top:70px;
-    transition:0.4s;
+    transition:0.4s ease;
+    z-index:1000;
 }
 
+/* cuando abre */
 .menu.active{
-    left:0;
+    right:0;
 }
 
 .menu li{
@@ -76,13 +78,14 @@ header {
     text-decoration:none;
     display:block;
     padding:15px 20px;
+    font-size:16px;
 }
 
 .menu a i{
     margin-right:10px;
 }
 
-/* ===== SUBMENU ===== */
+/* ===== SUBMENU SERVICIOS ===== */
 .submenu{
     display:none;
     background:#0b4f75;
@@ -92,7 +95,6 @@ header {
     padding-left:40px;
 }
 
-/* mostrar submenu */
 .dropdown.active .submenu{
     display:block;
 }
