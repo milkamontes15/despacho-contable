@@ -122,28 +122,36 @@
 
 <script>
 
-/* ABRIR / CERRAR MENU */
+const menu = document.getElementById("menu");
+const overlay = document.getElementById("overlay");
+
+/* ABRIR MENU */
 function toggleMenu(){
-    document.getElementById("menu").classList.toggle("active");
+    menu.classList.toggle("active");
+    overlay.classList.toggle("active");
 }
 
 /* SUBMENU SERVICIOS */
 function toggleSubmenu(event){
     event.preventDefault();
-    event.target.parentElement.classList.toggle("active");
+    event.currentTarget.parentElement.classList.toggle("active");
 }
 
-/* ✅ CERRAR MENU SOLO EN OPCIONES NORMALES */
-document.querySelectorAll("#menu a").forEach(link => {
+/* CERRAR MENU AL TOCAR FUERA */
+overlay.addEventListener("click", () =>{
+    menu.classList.remove("active");
+    overlay.classList.remove("active");
+});
+
+/* CERRAR MENU AL ELEGIR OPCION */
+document.querySelectorAll("#menu a").forEach(link =>{
 
     link.addEventListener("click", function(){
 
-        /* si es el botón Servicios NO cerrar */
-        if(this.closest(".dropdown")){
-            return;
-        }
+        if(this.closest(".dropdown")) return;
 
-        document.getElementById("menu").classList.remove("active");
+        menu.classList.remove("active");
+        overlay.classList.remove("active");
     });
 
 });
