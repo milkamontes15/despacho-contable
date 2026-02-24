@@ -31,73 +31,69 @@ header {
 
 /* ===== NAVBAR ===== */
 .navbar{
+    background:#ff2e4c;
+    color:white;
+    padding:15px 20px;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    background:#0c2d48;
-    padding:15px 40px;
 }
 
 .logo{
-    color:white;
-    font-size:20px;
+    font-size:22px;
     font-weight:bold;
 }
 
-/* ===== MENU ===== */
+/* BOTON HAMBURGUESA */
+.menu-toggle{
+    font-size:24px;
+    cursor:pointer;
+}
+
+/* ===== MENU LATERAL ===== */
 .menu{
+    position:fixed;
+    top:0;
+    left:-260px;
+    width:260px;
+    height:100%;
+    background:#083b5c;
     list-style:none;
-    display:flex;
-    gap:25px;
+    padding-top:70px;
+    transition:0.4s;
+}
+
+.menu.active{
+    left:0;
 }
 
 .menu li{
-    position:relative;
+    border-bottom:1px solid rgba(255,255,255,0.2);
 }
 
 .menu a{
-    text-decoration:none;
     color:white;
-    font-weight:500;
-    padding:8px 10px;
+    text-decoration:none;
     display:block;
+    padding:15px 20px;
 }
 
-/* Hover */
-.menu a:hover{
-    background:#145da0;
-    border-radius:5px;
+.menu a i{
+    margin-right:10px;
 }
 
 /* ===== SUBMENU ===== */
 .submenu{
     display:none;
-    position:absolute;
-    top:40px;
-    left:0;
-    background:white;
-    min-width:220px;
-    box-shadow:0px 5px 15px rgba(0,0,0,0.2);
-    border-radius:8px;
-    padding:10px 0;
-    z-index:1000;
-}
-
-.submenu li{
-    width:100%;
+    background:#0b4f75;
 }
 
 .submenu a{
-    color:#333;
-    padding:10px 20px;
+    padding-left:40px;
 }
 
-.submenu a:hover{
-    background:#f2f2f2;
-}
-
-/* Mostrar submenu */
-.dropdown:hover .submenu{
+/* mostrar submenu */
+.dropdown.active .submenu{
     display:block;
 }
 
