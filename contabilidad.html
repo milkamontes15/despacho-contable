@@ -66,15 +66,26 @@
     </p>
 </section>
 
- <script>
+<script>
+
+/* ABRIR / CERRAR MENU */
 function toggleMenu(){
     document.getElementById("menu").classList.toggle("active");
 }
 
+/* SUBMENU SERVICIOS */
 function toggleSubmenu(event){
     event.preventDefault();
     event.target.parentElement.classList.toggle("active");
 }
+
+/* 🔥 CERRAR MENU AL SELECCIONAR OPCION */
+document.querySelectorAll("#menu a").forEach(link => {
+    link.addEventListener("click", () => {
+        document.getElementById("menu").classList.remove("active");
+    });
+});
+
 </script>
 
 <footer>

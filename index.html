@@ -113,15 +113,26 @@
         </div> 
     </section>
     
-    <script>
-    function toggleMenu(){
+ <script>
+
+/* ABRIR / CERRAR MENU */
+function toggleMenu(){
     document.getElementById("menu").classList.toggle("active");
 }
 
-    function toggleSubmenu(event){
+/* SUBMENU SERVICIOS */
+function toggleSubmenu(event){
     event.preventDefault();
     event.target.parentElement.classList.toggle("active");
 }
+
+/* 🔥 CERRAR MENU AL SELECCIONAR OPCION */
+document.querySelectorAll("#menu a").forEach(link => {
+    link.addEventListener("click", () => {
+        document.getElementById("menu").classList.remove("active");
+    });
+});
+
 </script>
 
 <footer> 
