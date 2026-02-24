@@ -34,13 +34,14 @@
             <i class="fas fa-wifi"></i> Telecomunicaciones
         </a></li>
 
-        <!-- SERVICIOS DESPLEGABLE -->
-         <a href="#" onclick="toggleSubmenu(event)">
-            <i class="fas fa-briefcase"></i>
-            Servicios
-            <span class="arrow">▸</span>
-        </a>
-
+          <!-- SERVICIOS DESPLEGABLE -->
+         <li class="dropdown">
+            <a href="#" onclick="toggleSubmenu(event)">
+                <i class="fas fa-briefcase"></i>
+                Servicios
+                <span class="arrow">▸</span>
+            </a>
+            
             <ul class="submenu">
                 <li><a href="contabilidad.html">Contabilidad General</a></li>
                 <li><a href="declaraciones.html">Declaraciones Fiscales</a></li>
@@ -78,10 +79,10 @@ function toggleMenu(){
     overlay.classList.toggle("active");
 }
 
-/* ✅ SERVICIOS */
+/* SERVICIOS */
 function toggleSubmenu(event){
     event.preventDefault();
-    event.stopPropagation();   // 🔥 evita que se cierre el menú
+    event.stopPropagation();   // evita que se cierre el menú
     event.currentTarget.parentElement.classList.toggle("active");
 }
 
@@ -97,7 +98,7 @@ document.querySelectorAll("#menu a").forEach(link=>{
     link.addEventListener("click", function(){
 
         if(this.parentElement.classList.contains("dropdown"))
-            return; // ❌ NO cerrar si es Servicios
+            return; // NO cerrar si es Servicios
 
         menu.classList.remove("active");
         overlay.classList.remove("active");
