@@ -67,7 +67,6 @@
         para empresas y personas físicas.
     </p>
 </section>
-
 <script>
 
 /* ABRIR / CERRAR MENU */
@@ -81,14 +80,23 @@ function toggleSubmenu(event){
     event.target.parentElement.classList.toggle("active");
 }
 
-/* 🔥 CERRAR MENU AL SELECCIONAR OPCION */
+/* ✅ CERRAR MENU SOLO EN OPCIONES NORMALES */
 document.querySelectorAll("#menu a").forEach(link => {
-    link.addEventListener("click", () => {
+
+    link.addEventListener("click", function(){
+
+        /* si es el botón Servicios NO cerrar */
+        if(this.closest(".dropdown")){
+            return;
+        }
+
         document.getElementById("menu").classList.remove("active");
     });
+
 });
 
 </script>
+
 <footer>
     © 2026 Despacho Contable 
 </footer>
