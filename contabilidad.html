@@ -70,30 +70,32 @@
 const menu = document.getElementById("menu");
 const overlay = document.getElementById("overlay");
 
-/* ABRIR MENU */
+/* MENU */
 function toggleMenu(){
     menu.classList.toggle("active");
     overlay.classList.toggle("active");
 }
 
-/* SUBMENU SERVICIOS */
+/* ✅ SERVICIOS */
 function toggleSubmenu(event){
     event.preventDefault();
+    event.stopPropagation();   // 🔥 evita que se cierre el menú
     event.currentTarget.parentElement.classList.toggle("active");
 }
 
-/* CERRAR MENU AL TOCAR FUERA */
-overlay.addEventListener("click", () =>{
+/* CERRAR TOCANDO FUERA */
+overlay.addEventListener("click", ()=>{
     menu.classList.remove("active");
     overlay.classList.remove("active");
 });
 
-/* CERRAR MENU AL ELEGIR OPCION */
-document.querySelectorAll("#menu a").forEach(link =>{
+/* CERRAR SOLO LINKS NORMALES */
+document.querySelectorAll("#menu a").forEach(link=>{
 
     link.addEventListener("click", function(){
 
-        if(this.closest(".dropdown")) return;
+        if(this.parentElement.classList.contains("dropdown"))
+            return; // ❌ NO cerrar si es Servicios
 
         menu.classList.remove("active");
         overlay.classList.remove("active");
