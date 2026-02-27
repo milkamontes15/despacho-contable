@@ -30,7 +30,7 @@ header {
 
 /* ===== NAVBAR ===== */
 .navbar{
-    background:#0c2d48; /* color profesional azul */
+    background:#0c2d48;
     color:white;
     padding:15px 20px;
     display:flex;
@@ -482,4 +482,12 @@ html{
 .overplay{
     opacity: 1;
     visibility: visible;
+}
+
+.dropdown.active .arrow{
+    transform: rotate(90deg);
+}
+
+.arrow{
+    transition: 0.3s;
 }
