@@ -16,7 +16,7 @@
     <div class="logo">Despacho Contable</div>
 
     <!-- BOTON HAMBURGUESA -->
-    <div class="menu-toggle" onclick="toggleMenu()">
+    <div class="menu-toggle" id="menuBtn">
     <i class="fas fa-bars"></i>
 </div>
 
@@ -54,7 +54,7 @@
         </a></li>
 
         <li><a href="clientes.html">
-            <i class="fas font-awesome"></i>Clientes
+            <i class="fas font-user-friends"></i> Clientes
         </a></li>
 
     </ul>
@@ -75,7 +75,8 @@
         <div class="testimonial"> 
             <p>★★★★★</p> 
             <p>"Optimizaron nuestra estrategia fiscal y mejoramos resultados."</p> 
-            <strong>- Carlos Hernández, PyME</strong> </div> <div class="testimonial"> 
+            <strong>- Carlos Hernández, PyME</strong>
+            <div class="testimonial"> 
                 <p>★★★★★</p> 
                 <p>"Total confianza y transparencia en cada proceso."</p> 
                 <strong>- Ana Martínez, Independiente</strong> 
@@ -86,18 +87,21 @@
 <script>
 
 const menu = document.getElementById("menu");
+const menuBtn = document.getElementById("menuBtn");
 const overlay = document.getElementById("overlay");
 
 /* MENU */
+menuBtn.addEventListener("click", toggleMenu);
+
 function toggleMenu(){
     menu.classList.toggle("active");
     overlay.classList.toggle("active");
 }
 
-/* ✅ SERVICIOS */
+/* SERVICIOS */
 function toggleSubmenu(event){
     event.preventDefault();
-    event.stopPropagation();   // 🔥 evita que se cierre el menú
+    event.stopPropagation();
     event.currentTarget.parentElement.classList.toggle("active");
 }
 
@@ -113,7 +117,7 @@ document.querySelectorAll("#menu a").forEach(link=>{
     link.addEventListener("click", function(){
 
         if(this.parentElement.classList.contains("dropdown"))
-            return; // ❌ NO cerrar si es Servicios
+            return;
 
         menu.classList.remove("active");
         overlay.classList.remove("active");
