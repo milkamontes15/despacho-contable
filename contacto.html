@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <title>Contacto</title>
+    <meta name="description" 
+    content="Conoce nuestro despacho contable, misión, visión y valores profesionales.">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -16,9 +18,9 @@
     <div class="logo">Despacho Contable</div>
 
     <!-- BOTON HAMBURGUESA -->
-  <div class="menu-toggle" id="menuBtn">
+  <button class="menu-toggle" id="menuBtn">
     <i class="fas fa-bars"></i>
-</div>
+  </button>
 
     <!-- MENU LATERAL -->
     <ul class="menu" id="menu">
@@ -126,51 +128,11 @@
     </div>
 </section>
 
-<script>
-
-const menu = document.getElementById("menu");
-const menuBtn = document.getElementById("menuBtn");
-const overlay = document.getElementById("overlay");
-
-/* MENU */
-menuBtn.addEventListener("click", toggleMenu);
-
-function toggleMenu(){
-    menu.classList.toggle("active");
-    overlay.classList.toggle("active");
-}
-
-/* SERVICIOS */
-function toggleSubmenu(event){
-    event.preventDefault();
-    event.stopPropagation();
-    event.currentTarget.parentElement.classList.toggle("active");
-}
-
-/* CERRAR TOCANDO FUERA */
-overlay.addEventListener("click", ()=>{
-    menu.classList.remove("active");
-    overlay.classList.remove("active");
-});
-
-/* CERRAR SOLO LINKS NORMALES */
-document.querySelectorAll("#menu a").forEach(link=>{
-
-    link.addEventListener("click", function(){
-
-        if(this.parentElement.classList.contains("dropdown"))
-            return;
-
-        menu.classList.remove("active");
-        overlay.classList.remove("active");
-    });
-
-});
-
-</script>
 <footer>
-       © 2026 Despacho Contable - C.P. Carlos Gálvez | Ing. Rafael Medina |  Impulsora de Marcas del Noroeste S.A. de C.V.
+        © 2026 Despacho Contable - C.P. Carlos Gálvez | Impulsora de Marcas del Noroeste S.A. de C.V. | Todos los derechos reservados 
 </footer>
+
+<script defer src="js/script.js"></script>
 
 </body>
 </html>
