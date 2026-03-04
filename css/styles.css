@@ -28,7 +28,7 @@ header {
     z-index: 1000;
 }
 
-/* ===== NAVBAR ===== */
+/* NAVBAR */
 .navbar{
     background:#0c2d48;
     color:white;
@@ -41,61 +41,6 @@ header {
 .logo{
     font-size:22px;
     font-weight:bold;
-}
-
-/* BOTON HAMBURGUESA */
-.menu-toggle{
-    font-size:26px;
-    cursor:pointer;
-}
-
-/* ===== MENU LATERAL DERECHO ===== */
-.menu{
-    position:fixed;
-    top:0;
-    right:-260px; /* oculto a la derecha */
-    width:260px;
-    height:100%;
-    background:#083b5c;
-    list-style:none;
-    padding-top:70px;
-    transition:0.4s ease;
-    z-index:1000;
-}
-
-/* cuando abre */
-.menu.active{
-    right:0;
-}
-
-.menu li{
-    border-bottom:1px solid rgba(255,255,255,0.2);
-}
-
-.menu a{
-    color:white;
-    text-decoration:none;
-    display:block;
-    padding:15px 20px;
-    font-size:16px;
-}
-
-.menu a i{
-    margin-right:10px;
-}
-
-/* ===== SUBMENU SERVICIOS ===== */
-.submenu{
-    display:none;
-    background:#0b4f75;
-}
-
-.submenu a{
-    padding-left:40px;
-}
-
-.dropdown.active .submenu{
-    display:block;
 }
 
 /* HERO */
@@ -490,4 +435,61 @@ html{
 
 .arrow{
     transition: 0.3s;
+}
+
+.js{
+/* BOTON HAMBURGUESA */
+.menu-toggle{
+    font-size:26px;
+    cursor:pointer;
+}
+
+/* MENU LATERAL DERECHO */
+.menu{
+    position:fixed;
+    top:0;
+    right:-260px; /* oculto a la derecha */
+    width:260px;
+    height:100%;
+    background:#083b5c;
+    list-style:none;
+    padding-top:70px;
+    transition:0.4s ease;
+    z-index:1000;
+}
+
+/* cuando abre */
+.menu.active{
+    right:0;
+}
+
+.menu li{
+    border-bottom:1px solid rgba(255,255,255,0.2);
+}
+
+.menu a{
+    color:white;
+    text-decoration:none;
+    display:block;
+    padding:15px 20px;
+    font-size:16px;
+}
+
+.menu a i{
+    margin-right:10px;
+}
+
+/* ===== SUBMENU SERVICIOS ===== */
+.submenu{
+    display:none;
+    background:#0b4f75;
+}
+
+.submenu a{
+    padding-left:40px;
+}
+
+.dropdown.active .submenu{
+    display:block;
+}
 }
