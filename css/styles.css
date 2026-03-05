@@ -30,7 +30,7 @@ header {
 
 /* NAVBAR */
 .navbar{
-    background:#0c2d48;
+    background:#355777;
     color:white;
     padding:15px 20px;
     display:flex;
@@ -97,7 +97,7 @@ MENU HAMBURGUESA
     right:-260px;
     width:260px;
     height:100%;
-    background:#083b5c;
+    background:#355777;
     list-style:none;
     padding-top:70px;
     transition:0.4s;
