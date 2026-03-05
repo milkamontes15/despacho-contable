@@ -437,7 +437,6 @@ html{
     transition: 0.3s;
 }
 
-.js{
 /* BOTON HAMBURGUESA */
 .menu-toggle{
     font-size:26px;
@@ -491,5 +490,4 @@ html{
 
 .dropdown.active .submenu{
     display:block;
-}
 }
