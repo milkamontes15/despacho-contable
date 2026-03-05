@@ -1,5 +1,5 @@
 :root {
-    --primary-color: #355777;
+    --primary-color: rgb(53, 87, 119);
     --secondary-color: #c0a44a;
     --background-color: #f4f6f9;
     --white: #ffffff;
@@ -61,7 +61,7 @@ header {
     left:0;
     width:100%;
     height: 100%;
-    background:rgb(0,0,0,0,4);
+    background:rgb(53, 87, 119);
     opacity: 0;
     visibility: hidden;
     transition: 0.3s;
