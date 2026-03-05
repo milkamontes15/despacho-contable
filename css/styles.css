@@ -533,3 +533,25 @@ iframe {
 html{
     scroll-behavior:smooth;
 }
+
+.empresa-card{
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgb(0, 0, 0, 0.05);
+
+    transition: all 0.3s ease;
+}
+
+.empresa-card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+.empresa-imagen img{
+    transition: trasnform 0.3s ease;
+}
+
+.empresa-imagen img:hover{
+    transform: scale(1.03);
+}
