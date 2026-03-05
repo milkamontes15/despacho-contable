@@ -1,5 +1,5 @@
 :root {
-    --primary-color: rgb(35, 51, 66);
+    --primary-color: rgb(53, 87, 119);
     --secondary-color: #c0a44a;
     --background-color: #f4f6f9;
     --white: #ffffff;
@@ -230,7 +230,7 @@ OVERLAY (FONDO OSCURO)
 
 .section h2 {
     margin-bottom: 25px;
-    color: var(--primary-color);
+    color: var(rgb(35, 51, 66));
     font-size: 32px;
     font-weight: 700;
 }
