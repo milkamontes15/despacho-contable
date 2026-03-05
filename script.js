@@ -19,12 +19,22 @@ window.toggleSubmenu = function(event){
     event.currentTarget.parentElement.classList.toggle("active");
 }
 
-/* Cerrar menú al hacer click fuera */
+/* CERRAR TOCANDO FUERA */
+overlay.addEventListener("click", ()=>{
+    menu.classList.remove("active");
+    overlay.classList.remove("active");
+});
+
+/* CERRAR MENU SI SE HACE CLICK FUERA */
 document.addEventListener("click", function(event){
 
     if(!menu.contains(event.target) && !menuBtn.contains(event.target)){
         menu.classList.remove("active");
+        overlay.classList.remove("active");
     }
+
+});
+
 /* CERRAR LINKS */
 document.querySelectorAll("#menu a").forEach(link=>{
     link.addEventListener("click", function(){
