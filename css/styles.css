@@ -43,7 +43,52 @@ header {
     font-weight:bold;
 }
 
+/*Flecha de servico*/
+.arrow{
+    float:right;
+    transition: 0.3s;
+}
 
+/*girar flecha*/
+.dropdown.active .arrow{
+    transform: rotate(90deg);
+}
+
+/*fondo oscuro*/
+.overplay{
+    position: fixed;
+    top: 0;
+    left:0;
+    width:100%;
+    height: 100%;
+    background:rgb(0,0,0,0,4);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+    z-index: 900;
+}
+
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: none;
+}
+
+.overlay.active{
+    display: block;
+}
+
+.dropdown.active .arrow{
+    transform: rotate(90deg);
+}
+
+.arrow{
+    transition: 0.3s;
+}
 /* BOTON HAMBURGUESA */
 .menu-toggle{
     font-size:26px;
@@ -54,7 +99,7 @@ header {
 .menu{
     position:fixed;
     top:0;
-    right:-260px; /* oculto a la derecha */
+    right:-260px; /* oculto */
     width:260px;
     height:100%;
     background:#083b5c;
@@ -64,7 +109,7 @@ header {
     z-index:1000;
 }
 
-/* cuando abre */
+/* MENU ABIERTO */
 .menu.active{
     right:0;
 }
@@ -97,6 +142,35 @@ header {
 
 .dropdown.active .submenu{
     display:block;
+}
+
+/* FLECHA SERVICIOS */
+.arrow{
+    float:right;
+    transition:0.3s;
+}
+
+.dropdown.active .arrow{
+    transform:rotate(90deg);
+}
+
+/* FONDO OSCURO CUANDO ABRE MENU */
+.overlay{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.5);
+    opacity:0;
+    visibility:hidden;
+    transition:0.3s;
+    z-index:900;
+}
+
+.overlay.active{
+    opacity:1;
+    visibility:visible;
 }
 
 /* HERO */
@@ -453,134 +527,4 @@ iframe {
 
 html{
     scroll-behavior:smooth;
-}
-
-/*Flecha de servico*/
-.arrow{
-    float:right;
-    transition: 0.3s;
-}
-
-/*girar flecha*/
-.dropdown.active .arrow{
-    transform: rotate(90deg);
-}
-
-/*fondo oscuro*/
-.overplay{
-    position: fixed;
-    top: 0;
-    left:0;
-    width:100%;
-    height: 100%;
-    background:rgb(0,0,0,0,4);
-    opacity: 0;
-    visibility: hidden;
-    transition: 0.3s;
-    z-index: 900;
-}
-
-.overlay{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.5);
-    display: none;
-}
-
-.overlay.active{
-    display: block;
-}
-
-.dropdown.active .arrow{
-    transform: rotate(90deg);
-}
-
-.arrow{
-    transition: 0.3s;
-}
-/* BOTON HAMBURGUESA */
-.menu-toggle{
-    font-size:26px;
-    cursor:pointer;
-}
-
-/* MENU LATERAL DERECHO */
-.menu{
-    position:fixed;
-    top:0;
-    right:-260px; /* oculto */
-    width:260px;
-    height:100%;
-    background:#083b5c;
-    list-style:none;
-    padding-top:70px;
-    transition:0.4s ease;
-    z-index:1000;
-}
-
-/* MENU ABIERTO */
-.menu.active{
-    right:0;
-}
-
-.menu li{
-    border-bottom:1px solid rgba(255,255,255,0.2);
-}
-
-.menu a{
-    color:white;
-    text-decoration:none;
-    display:block;
-    padding:15px 20px;
-    font-size:16px;
-}
-
-.menu a i{
-    margin-right:10px;
-}
-
-/* ===== SUBMENU SERVICIOS ===== */
-.submenu{
-    display:none;
-    background:#0b4f75;
-}
-
-.submenu a{
-    padding-left:40px;
-}
-
-.dropdown.active .submenu{
-    display:block;
-}
-
-/* FLECHA SERVICIOS */
-.arrow{
-    float:right;
-    transition:0.3s;
-}
-
-.dropdown.active .arrow{
-    transform:rotate(90deg);
-}
-
-/* FONDO OSCURO CUANDO ABRE MENU */
-.overlay{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background:rgba(0,0,0,0.5);
-    opacity:0;
-    visibility:hidden;
-    transition:0.3s;
-    z-index:900;
-}
-
-.overlay.active{
-    opacity:1;
-    visibility:visible;
 }
