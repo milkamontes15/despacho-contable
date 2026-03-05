@@ -220,7 +220,7 @@ OVERLAY (FONDO OSCURO)
 
 /* SECTIONS */
 .section {
-    padding: 40px 60px;
+    padding: 30px 50px;
     text-align: center;
 }
 
