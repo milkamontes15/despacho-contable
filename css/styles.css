@@ -396,8 +396,8 @@ iframe {
 .empresa-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: center;
+    gap: 40px;
+    align-items: start;
     max-width: 1200px;
     margin: auto;
 }
@@ -481,6 +481,10 @@ iframe {
 .empresa-card-grupo p {
     line-height: 1.8;
     text-align: justify;
+}
+
+.empresa-contenido h2{
+    grid-column: 1 / -1;
 }
 
 @media (max-width: 768px) {
