@@ -480,9 +480,18 @@ html{
     z-index: 900;
 }
 
-.overplay{
-    opacity: 1;
-    visibility: visible;
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: none;
+}
+
+.overlay.active{
+    display: block;
 }
 
 .dropdown.active .arrow{
@@ -492,7 +501,6 @@ html{
 .arrow{
     transition: 0.3s;
 }
-
 /* BOTON HAMBURGUESA */
 .menu-toggle{
     font-size:26px;
@@ -503,7 +511,7 @@ html{
 .menu{
     position:fixed;
     top:0;
-    right:-260px; /* oculto a la derecha */
+    right:-260px; /* oculto */
     width:260px;
     height:100%;
     background:#083b5c;
@@ -513,7 +521,7 @@ html{
     z-index:1000;
 }
 
-/* cuando abre */
+/* MENU ABIERTO */
 .menu.active{
     right:0;
 }
@@ -548,10 +556,31 @@ html{
     display:block;
 }
 
-#menu{
-    display: none;
+/* FLECHA SERVICIOS */
+.arrow{
+    float:right;
+    transition:0.3s;
 }
 
-#menu.active{
-    display: block;
+.dropdown.active .arrow{
+    transform:rotate(90deg);
+}
+
+/* FONDO OSCURO CUANDO ABRE MENU */
+.overlay{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.5);
+    opacity:0;
+    visibility:hidden;
+    transition:0.3s;
+    z-index:900;
+}
+
+.overlay.active{
+    opacity:1;
+    visibility:visible;
 }
