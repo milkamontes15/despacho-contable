@@ -7,7 +7,8 @@ const overlay = document.getElementById("overlay");
 /* MENU */
 menuBtn.addEventListener("click", toggleMenu);
 
-function toggleMenu(){
+function toggleMenu(event){
+    event.stopPropagation();
     menu.classList.toggle("active");
     overlay.classList.toggle("active");
 }
@@ -19,13 +20,13 @@ window.toggleSubmenu = function(event){
     event.currentTarget.parentElement.classList.toggle("active");
 }
 
-/* CERRAR TOCANDO FUERA */
+/* CERRAR CON OVERLAY */
 overlay.addEventListener("click", ()=>{
     menu.classList.remove("active");
     overlay.classList.remove("active");
 });
 
-/* CERRAR MENU SI SE HACE CLICK FUERA */
+/* CERRAR CLICK FUERA */
 document.addEventListener("click", function(event){
 
     if(!menu.contains(event.target) && !menuBtn.contains(event.target)){
