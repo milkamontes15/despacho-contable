@@ -80,23 +80,27 @@ header {
 .arrow{
     transition: 0.3s;
 }
-/* BOTON HAMBURGUESA */
+/* =========================
+MENU HAMBURGUESA
+========================= */
+
+/* BOTON */
 .menu-toggle{
     font-size:26px;
     cursor:pointer;
 }
 
-/* MENU LATERAL DERECHO */
+/* MENU LATERAL */
 .menu{
-    position:fixed;
+    position: fixed;
     top:0;
-    right:-260px; /* oculto */
+    right:-260px;
     width:260px;
     height:100%;
     background:#083b5c;
     list-style:none;
     padding-top:70px;
-    transition:0.4s ease;
+    transition:0.4s;
     z-index:1001;
 }
 
@@ -105,6 +109,7 @@ header {
     right:0;
 }
 
+/* ITEMS */
 .menu li{
     border-bottom:1px solid rgba(255,255,255,0.2);
 }
@@ -121,7 +126,10 @@ header {
     margin-right:10px;
 }
 
-/* ===== SUBMENU SERVICIOS ===== */
+/* =========================
+SUBMENU SERVICIOS
+========================= */
+
 .submenu{
     display:none;
     background:#0b4f75;
@@ -135,7 +143,7 @@ header {
     display:block;
 }
 
-/* FLECHA SERVICIOS */
+/* FLECHA */
 .arrow{
     float:right;
     transition:0.3s;
@@ -145,7 +153,10 @@ header {
     transform:rotate(90deg);
 }
 
-/* FONDO OSCURO CUANDO ABRE MENU */
+/* =========================
+OVERLAY (FONDO OSCURO)
+========================= */
+
 .overlay{
     position:fixed;
     top:0;
@@ -156,14 +167,13 @@ header {
     opacity:0;
     visibility:hidden;
     transition:0.3s;
-    z-index:900;
+    z-index:1000;
 }
 
 .overlay.active{
     opacity:1;
     visibility:visible;
 }
-
 /* HERO */
 .hero {
     background: linear-gradient(rgba(55, 75, 121, 0.92), rgba(31,42,68,0.92)),
