@@ -28,6 +28,21 @@ header {
     z-index: 1000;
 }
 
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+.logo-img{
+    width: 150px;
+    height: 150;
+    border-radius: 20px;
+}
+
 /* NAVBAR */
 .navbar{
     background:#355777;
@@ -554,19 +569,4 @@ html{
 
 .empresa-imagen img:hover{
     transform: scale(1.03);
-}
-
-.logo{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 20px;
-    font-weight: bold;
-    color: white;
-}
-
-.logo-img{
-    width: 150px;
-    height: 150;
-    border-radius: 20px;
 }
