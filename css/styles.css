@@ -236,7 +236,7 @@ OVERLAY (FONDO OSCURO)
 /* SECTIONS */
 .section {
     padding: 30px 50px;
-    text-align: center;
+    text-align: justify;
 }
 
 .section.light {
