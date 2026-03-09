@@ -250,6 +250,10 @@ OVERLAY (FONDO OSCURO)
     font-weight: 700;
 }
 
+.section p{
+    text-align: justify;
+}
+
 /* CARDS */
 .cards {
     display: flex;
