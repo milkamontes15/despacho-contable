@@ -248,9 +248,6 @@ OVERLAY (FONDO OSCURO)
     color: rgb(35, 51, 66);
     font-size: 32px;
     font-weight: 700;
-}
-
-.section p{
     text-align: justify;
 }
 
