@@ -252,6 +252,7 @@ OVERLAY (FONDO OSCURO)
 
 .texto-justificado{
     text-align: justify;
+    text-align: center;
 }
 
 /* CARDS */
