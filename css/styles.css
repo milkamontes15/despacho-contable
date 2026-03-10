@@ -251,7 +251,19 @@ OVERLAY (FONDO OSCURO)
 }
 
 .texto-justificado{
-    text-align: center, justify;
+    text-align: justify;
+    line-height: 1.7;
+    padding-left: 20px;
+}
+
+.texto-justificado li{
+    margin-bottom: 12px;
+}
+
+.section{
+    max-width: 900px;
+    margin: auto;
+    padding: 40px 20px;
 }
 
 /* CARDS */
