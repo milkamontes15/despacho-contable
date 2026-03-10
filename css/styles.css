@@ -586,3 +586,11 @@ html{
 .empresa-imagen img:hover{
     transform: scale(1.03);
 } 
+
+.mejoras-imagen img{
+    transition: trasnform 0.3s ease;
+}
+
+.mejoras-imagen img:hover{
+    transform: scale(1.03);
+}
