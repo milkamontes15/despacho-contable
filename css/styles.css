@@ -251,8 +251,7 @@ OVERLAY (FONDO OSCURO)
 }
 
 .texto-justificado{
-    text-align: justify;
-    text-align: center;
+    text-align: center, justify;
 }
 
 /* CARDS */
@@ -574,4 +573,4 @@ html{
 
 .empresa-imagen img:hover{
     transform: scale(1.03);
-}
+} 
