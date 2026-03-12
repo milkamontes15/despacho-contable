@@ -579,12 +579,6 @@ html{
     box-shadow: 0 15px 35px rgba(0,0,0,0.12);
 }
 
-.mejoras-img{
-    width: 300px;
-    margin-top: 25px;
-    border-radius: 10px;
-}
-
 .empresa-imagen img{
     transition: trasnform 0.3s ease;
 }
@@ -593,6 +587,11 @@ html{
     transform: scale(1.03);
 } 
 
+.mejoras-img{
+    width: 300px;
+    margin-top: 25px;
+    border-radius: 10px;
+}
 .mejoras-imagen img{
     transition: trasnform 0.3s ease;
 }
