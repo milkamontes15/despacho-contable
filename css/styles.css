@@ -628,3 +628,17 @@ html{
 .personal-imagen img:hover{
     transform: scale(1.03);
 }
+
+.asesoria-imagen{
+    width: 500px;
+    margin-top: 25px;
+    border-radius: 10px;
+}
+
+.asesoria-imagen img{
+    transition: transform 0.3s ease;
+}
+
+.asesoria-imagen img:hover{
+    transform: scale(1.03);
+}
