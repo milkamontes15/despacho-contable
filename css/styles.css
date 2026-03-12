@@ -593,6 +593,11 @@ html{
     transform: scale(1.03);
 } 
 
+.mejoras-card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
 .mejoras-imagen{
     width: 500px;
     margin-top: 25px;
@@ -605,6 +610,11 @@ html{
 
 .mejoras-imagen img:hover{
     transform: scale(1.03);
+}
+
+.servicio-card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
 }
 
 .servicio-imagen{
@@ -621,6 +631,11 @@ html{
     transform: scale(1.03);
 }
 
+.personal-card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
 .personal-imagen{
     width: 500px;
     margin-top: 25PX;
@@ -633,6 +648,11 @@ html{
 
 .personal-imagen img:hover{
     transform: scale(1.03);
+}
+
+.asesoria-card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
 }
 
 .asesoria-imagen{
