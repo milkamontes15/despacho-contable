@@ -310,10 +310,16 @@ OVERLAY (FONDO OSCURO)
 /* CONTACT */
 .contact-container {
     display: flex;
-    gap: 50px;
+    gap: 60px;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.contact-info{
+    text-align: left;
 }
 
 .contact-info {
