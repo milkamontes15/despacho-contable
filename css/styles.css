@@ -614,3 +614,17 @@ html{
 .servicio-imagen img:hover{
     transform: scale(1.03);
 }
+
+.personal-imagen{
+    width: 500px;
+    margin-top: 25PX;
+    border-radius: 10px;
+}
+
+.personal-imagen img{
+    transition: transform 0.3s ease;
+}
+
+.personal-imagen img:hover{
+    transform: scale(1.03);
+}
