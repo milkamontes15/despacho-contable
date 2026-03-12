@@ -600,3 +600,17 @@ html{
 .mejoras-imagen img:hover{
     transform: scale(1.03);
 }
+
+.servicio-imagen{
+    width: 500px;
+    margin-top: 25px;
+    border-radius: 10px;
+}
+
+.servicio-imagen img{
+    transition: transform 0.3s ease;
+}
+
+.servicio-imagen img:hover{
+    transform: scale(1.03);
+}
