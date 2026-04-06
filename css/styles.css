@@ -638,7 +638,7 @@ html{
 
 .personal-imagen{
     width: 500px;
-    margin-top: 25PX;
+    margin-top: 25px;
     border-radius: 10px;
 }
 
@@ -667,4 +667,10 @@ html{
 
 .asesoria-imagen img:hover{
     transform: scale(1.03);
+}
+
+.imagen img{
+    width: 800;
+    border-color: blueviolet;
+    margin-top: 8px;
 }
