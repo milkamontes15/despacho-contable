@@ -454,8 +454,6 @@ font-size:28px;
 grid-template-columns:1fr;
 }
 
-}
-
 .menu li,
 .menu ul,
 .menu a{
@@ -469,3 +467,6 @@ pointer-events:none;
 .overlay.active{
 pointer-events:auto;
 }
+
+}
+
