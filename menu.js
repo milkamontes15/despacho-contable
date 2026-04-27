@@ -1,53 +1,49 @@
-document.addEventListener("DOMContentLoaded", function(){
+document.addEventListener("DOMContentLoaded", () => {
 
 const menu = document.getElementById("menu");
 const menuBtn = document.getElementById("menuBtn");
 const overlay = document.getElementById("overlay");
 
-/* ABRIR MENU */
-menuBtn.addEventListener("click", function(e){
-e.stopPropagation();
+/* abrir / cerrar */
+menuBtn.addEventListener("click", () => {
 menu.classList.toggle("active");
 overlay.classList.toggle("active");
 });
 
-/* SUBMENU */
-window.toggleSubmenu = function(event){
-event.preventDefault();
-event.stopPropagation();
+/* cerrar */
+function cerrarMenu(){
+menu.classList.remove("active");
+overlay.classList.remove("active");
+}
 
-const item = event.currentTarget.parentElement;
-item.classList.toggle("active");
-};
-
-/* CLICK DENTRO MENU */
-menu.addEventListener("click", function(e){
-e.stopPropagation();
-});
-
-/* CERRAR FUERA */
+/* click overlay */
 overlay.addEventListener("click", cerrarMenu);
 
-/* CERRAR AL DAR CLICK EN LINKS NORMALES */
-document.querySelectorAll("#menu li a").forEach(link=>{
+/* dropdown */
+window.toggleSubmenu = function(e){
+e.preventDefault();
 
-link.addEventListener("click", function(){
+const li = e.currentTarget.closest(".dropdown");
+li.classList.toggle("active");
+};
 
-const parent = this.parentElement;
+/* links normales */
+document.querySelectorAll("#menu li a").forEach(link => {
 
-/* si es dropdown no cerrar */
-if(parent.classList.contains("dropdown")) return;
+link.addEventListener("click", function(e){
 
-/* si está dentro submenu sí cerrar */
+const li = this.closest("li");
+
+/* si dropdown no cerrar */
+if(li.classList.contains("dropdown")){
+return;
+}
+
+/* links submenu sí cierran */
 cerrarMenu();
 
 });
 
 });
-
-function cerrarMenu(){
-menu.classList.remove("active");
-overlay.classList.remove("active");
-}
 
 });
