@@ -83,7 +83,7 @@ color:white;
 cursor:pointer;
 transition:.3s;
 position:relative;
-z-index:9999;
+z-index:900;
 }
 
 .menu-toggle:hover{
@@ -100,7 +100,7 @@ background:linear-gradient(180deg,var(--primary),var(--primary-dark));
 list-style:none;
 padding-top:90px;
 transition:right .35s ease;
-z-index: 10000;
+z-index: 1000;
 box-shadow:-8px 0 25px rgba(0,0,0,.25);
 overflow-y:auto;
 pointer-events: auto;
@@ -166,7 +166,7 @@ background:rgba(0,0,0,.45);
 opacity:0;
 visibility:hidden;
 transition:.3s;
-z-index: 9998;
+z-index: 999;
 }
 
 .overlay.active{
