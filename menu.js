@@ -3,43 +3,38 @@ document.addEventListener("DOMContentLoaded", () => {
 const menu = document.getElementById("menu");
 const menuBtn = document.getElementById("menuBtn");
 const overlay = document.getElementById("overlay");
+const submenuBtn = document.querySelector(".submenu-toggle");
 
-/* abrir / cerrar */
-menuBtn.addEventListener("click", () => {
+/* abrir menú */
+menuBtn.addEventListener("click", (e) => {
+e.stopPropagation();
 menu.classList.toggle("active");
 overlay.classList.toggle("active");
 });
 
-/* cerrar */
+/* cerrar menú */
 function cerrarMenu(){
 menu.classList.remove("active");
 overlay.classList.remove("active");
 }
 
-/* click overlay */
+/* overlay */
 overlay.addEventListener("click", cerrarMenu);
 
-/* dropdown */
-window.toggleSubmenu = function(e){
+/* submenu */
+submenuBtn.addEventListener("click", (e) => {
 e.preventDefault();
-
-const li = e.currentTarget.closest(".dropdown");
-li.classList.toggle("active");
-};
+e.stopPropagation();
+submenuBtn.parentElement.classList.toggle("active");
+});
 
 /* links normales */
-document.querySelectorAll("#menu li a").forEach(link => {
+document.querySelectorAll("#menu a").forEach(link => {
 
-link.addEventListener("click", function(e){
+link.addEventListener("click", function(){
 
-const li = this.closest("li");
+if(this.classList.contains("submenu-toggle")) return;
 
-/* si dropdown no cerrar */
-if(li.classList.contains("dropdown")){
-return;
-}
-
-/* links submenu sí cierran */
 cerrarMenu();
 
 });
