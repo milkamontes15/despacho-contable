@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () {
 
 const menu = document.getElementById("menu");
 const menuBtn = document.getElementById("menuBtn");
@@ -6,40 +6,50 @@ const overlay = document.getElementById("overlay");
 const submenuBtn = document.querySelector(".submenu-toggle");
 const dropdown = document.querySelector(".dropdown");
 
-/* ABRIR MENU */
-menuBtn.addEventListener("click", (e) => {
+/* abrir/cerrar menu */
+menuBtn.addEventListener("click", function(e){
+    e.preventDefault();
     e.stopPropagation();
+
     menu.classList.toggle("active");
     overlay.classList.toggle("active");
 });
 
-/* CERRAR MENU */
+/* cerrar */
 function cerrarMenu(){
     menu.classList.remove("active");
     overlay.classList.remove("active");
     dropdown.classList.remove("active");
 }
 
-/* OVERLAY */
+/* overlay */
 overlay.addEventListener("click", cerrarMenu);
 
-/* SUBMENU */
-submenuBtn.addEventListener("click", (e) => {
+/* submenu */
+submenuBtn.addEventListener("click", function(e){
     e.preventDefault();
     e.stopPropagation();
     dropdown.classList.toggle("active");
 });
 
-/* PERMITIR CLIC DENTRO DEL MENU */
-menu.addEventListener("click", (e) => {
+/* evitar cierre dentro del menu */
+menu.addEventListener("click", function(e){
     e.stopPropagation();
 });
 
-/* SOLO CERRAR EN LINKS REALES */
-document.querySelectorAll(".submenu a, .menu li a:not(.submenu-toggle)").forEach(link => {
-    link.addEventListener("click", () => {
-        cerrarMenu();
+/* cerrar solo después de navegar */
+document.querySelectorAll("#menu a").forEach(link => {
+
+    if(link.classList.contains("submenu-toggle")) return;
+
+    link.addEventListener("click", function(){
+
+        setTimeout(() => {
+            cerrarMenu();
+        }, 150);
+
     });
+
 });
 
 });
