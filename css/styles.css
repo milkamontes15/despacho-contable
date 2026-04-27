@@ -91,14 +91,14 @@ transform:scale(1.1);
 .menu{
 position:fixed;
 top:0;
-right:-320px;
-width:300px;
+right:-2600px;
+width:260px;
 height:100%;
 background:linear-gradient(180deg,var(--primary),var(--primary-dark));
 list-style:none;
 padding-top:90px;
 transition:.35s ease;
-z-index:1002;
+z-index: 1001;
 box-shadow:-8px 0 25px rgba(0,0,0,.2);
 }
 
@@ -162,7 +162,7 @@ background:rgba(0,0,0,.45);
 opacity:0;
 visibility:hidden;
 transition:.3s;
-z-index:1001;
+z-index:900;
 }
 
 .overlay.active{
