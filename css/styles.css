@@ -91,7 +91,7 @@ transform:scale(1.08);
 }
 
 .menu{
-position: relative;
+position: fixed;
 top:0;
 right:-260px;
 width:260px;
