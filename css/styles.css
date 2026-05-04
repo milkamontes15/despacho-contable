@@ -205,6 +205,21 @@ HERO
   box-shadow: none;
 }
 
+.hero{
+background:
+linear-gradient(rgba(26,39,56,.82),rgba(26,39,56,.82)),
+url();
+background-size:cover;
+background-position:center;
+min-height:82vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:40px 20px;
+color:white;
+}
+
 /* que el texto quede encima del logo */
 .hero-content {
   position: relative;
