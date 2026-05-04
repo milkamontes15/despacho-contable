@@ -178,19 +178,37 @@ visibility:visible;
 HERO
 ========================= */
 
-.hero{
-background:
-linear-gradient(rgba(26,39,56,.82),rgba(26,39,56,.82)),
-url('https://images.unsplash.com/photo-1521791136064-7986c2920216+');
-background-size:cover;
-background-position:center;
-min-height:82vh;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-padding:40px 20px;
-color:white;
+/* LOGO MARCA DE AGUA EN HERO */
+#hero-logo {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-watermark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 380px;
+  height: 380px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-watermark img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0.10;  /* ajusta entre 0.05 y 0.20 */
+  filter: brightness(10) grayscale(1); /* lo pone blanco */
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* que el texto quede encima del logo */
+.hero-content {
+  position: relative;
+  z-index: 1;
 }
 
 .hero-content{
