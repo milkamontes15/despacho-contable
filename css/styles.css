@@ -179,9 +179,7 @@ HERO
 ========================= */
 
 .hero{
-background:
-linear-gradient(rgba(26,39,56,.82),rgba(26,39,56,.82)),
-url('https://images.unsplash.com/photo-1521791136064-7986c2920216+');
+background: url();
 background-size:cover;
 background-position:center;
 min-height:82vh;
@@ -346,7 +344,8 @@ max-width:100%;
 height:auto;
 }
 
-.empresa-imagen img,
+.logo1-imagen img,
+.empresa-imagen,
 .mejoras-imagen,
 .servicio-imagen,
 .personal-imagen,
